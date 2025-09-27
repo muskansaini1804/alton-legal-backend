@@ -48,6 +48,11 @@
     "poweredByText": {
       "type": "string",
       "required": true
+    },
+    "contactLinks": {
+      "type": "component",
+      "component": "contact-links.contact-links",
+      "repeatable": false
     }
   },
   "config": {}

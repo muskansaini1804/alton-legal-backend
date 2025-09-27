@@ -1,5 +1,13 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BannerBanner extends Struct.ComponentSchema {
+  collectionName: 'components_banner_banners';
+  info: {
+    displayName: 'banner';
+  };
+  attributes: {};
+}
+
 export interface BtnTextBtnText extends Struct.ComponentSchema {
   collectionName: 'components_btn_text_btn_texts';
   info: {
@@ -26,6 +34,21 @@ export interface CommonCaseCommonCase extends Struct.ComponentSchema {
   };
 }
 
+export interface ContactLinksContactLinks extends Struct.ComponentSchema {
+  collectionName: 'components_contact_links_contact_links';
+  info: {
+    displayName: 'contactLinks';
+  };
+  attributes: {
+    email: Schema.Attribute.Email;
+    phoneNumber: Schema.Attribute.BigInteger;
+    socialImages: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+  };
+}
+
 export interface DetailsDetails extends Struct.ComponentSchema {
   collectionName: 'components_details_details';
   info: {
@@ -45,6 +68,10 @@ export interface FooterFooter extends Struct.ComponentSchema {
   attributes: {
     aboutUsLinks: Schema.Attribute.Component<'sub-links.sub-links', true>;
     aboutUsTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    contactLinks: Schema.Attribute.Component<
+      'contact-links.contact-links',
+      false
+    >;
     contactUsTitle: Schema.Attribute.String & Schema.Attribute.Required;
     copyRightText: Schema.Attribute.String & Schema.Attribute.Required;
     legalLinks: Schema.Attribute.Component<'sub-links.sub-links', true>;
@@ -80,8 +107,12 @@ export interface HeaderHeader extends Struct.ComponentSchema {
     displayName: 'header';
   };
   attributes: {
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    loginText: Schema.Attribute.String & Schema.Attribute.Required;
     logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     navBar: Schema.Attribute.Component<'nav-bar.nav-bar', true>;
+    phoneNumber: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+    searchText: Schema.Attribute.String;
   };
 }
 
@@ -118,12 +149,7 @@ export interface NavBarNavBar extends Struct.ComponentSchema {
     displayName: 'navBar';
   };
   attributes: {
-    email: Schema.Attribute.Email & Schema.Attribute.Required;
-    languageText: Schema.Attribute.String & Schema.Attribute.Required;
     links: Schema.Attribute.Text & Schema.Attribute.Required;
-    loginText: Schema.Attribute.String & Schema.Attribute.Required;
-    phone: Schema.Attribute.BigInteger & Schema.Attribute.Required;
-    searchText: Schema.Attribute.String & Schema.Attribute.Required;
     subLinks: Schema.Attribute.Component<'sub-links.sub-links', true>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -224,8 +250,10 @@ export interface SubListsSubLists extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'banner.banner': BannerBanner;
       'btn-text.btn-text': BtnTextBtnText;
       'common-case.common-case': CommonCaseCommonCase;
+      'contact-links.contact-links': ContactLinksContactLinks;
       'details.details': DetailsDetails;
       'footer.footer': FooterFooter;
       'free-consultation.free-consultation': FreeConsultationFreeConsultation;
