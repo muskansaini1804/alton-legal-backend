@@ -26,10 +26,6 @@ export interface CommonCaseCommonCase extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
-    relatedServiceList: Schema.Attribute.Component<
-      'related-service-list.related-service-list',
-      true
-    >;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
