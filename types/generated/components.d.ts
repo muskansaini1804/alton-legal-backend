@@ -34,6 +34,21 @@ export interface CommonCaseCommonCase extends Struct.ComponentSchema {
   };
 }
 
+export interface ContactLinksContactLinks extends Struct.ComponentSchema {
+  collectionName: 'components_contact_links_contact_links';
+  info: {
+    displayName: 'contactLinks';
+  };
+  attributes: {
+    email: Schema.Attribute.Email;
+    phoneNumber: Schema.Attribute.BigInteger;
+    socialImages: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+  };
+}
+
 export interface DetailsDetails extends Struct.ComponentSchema {
   collectionName: 'components_details_details';
   info: {
@@ -53,6 +68,10 @@ export interface FooterFooter extends Struct.ComponentSchema {
   attributes: {
     aboutUsLinks: Schema.Attribute.Component<'sub-links.sub-links', true>;
     aboutUsTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    contactLinks: Schema.Attribute.Component<
+      'contact-links.contact-links',
+      false
+    >;
     contactUsTitle: Schema.Attribute.String & Schema.Attribute.Required;
     copyRightText: Schema.Attribute.String & Schema.Attribute.Required;
     legalLinks: Schema.Attribute.Component<'sub-links.sub-links', true>;
@@ -234,6 +253,7 @@ declare module '@strapi/strapi' {
       'banner.banner': BannerBanner;
       'btn-text.btn-text': BtnTextBtnText;
       'common-case.common-case': CommonCaseCommonCase;
+      'contact-links.contact-links': ContactLinksContactLinks;
       'details.details': DetailsDetails;
       'footer.footer': FooterFooter;
       'free-consultation.free-consultation': FreeConsultationFreeConsultation;

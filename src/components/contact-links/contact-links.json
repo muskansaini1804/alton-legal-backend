@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_contact_links_contact_links",
+  "info": {
+    "displayName": "contactLinks"
+  },
+  "options": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "phoneNumber": {
+      "type": "biginteger"
+    },
+    "socialImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
