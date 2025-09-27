@@ -756,6 +756,10 @@ export interface ApiPracticeAreasDetailPracticeAreasDetail
       Schema.Attribute.Private;
     mainDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    relatedServiceList: Schema.Attribute.Component<
+      'related-service-list.related-service',
+      true
+    >;
     relatedServiceText: Schema.Attribute.String & Schema.Attribute.Required;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     thumbnailImage: Schema.Attribute.Media<'images'> &

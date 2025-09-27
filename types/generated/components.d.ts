@@ -210,6 +210,17 @@ export interface PracticeAreasPracticeAreas extends Struct.ComponentSchema {
   };
 }
 
+export interface RelatedServiceListRelatedService
+  extends Struct.ComponentSchema {
+  collectionName: 'components_related_service_list_related_services';
+  info: {
+    displayName: 'relatedService';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface RelatedServiceListRelatedServiceList
   extends Struct.ComponentSchema {
   collectionName: 'components_related_service_list_related_service_lists';
@@ -262,6 +273,7 @@ declare module '@strapi/strapi' {
       'our-core-values.why-choose-us': OurCoreValuesWhyChooseUs;
       'our-mission.our-mission': OurMissionOurMission;
       'practice-areas.practice-areas': PracticeAreasPracticeAreas;
+      'related-service-list.related-service': RelatedServiceListRelatedService;
       'related-service-list.related-service-list': RelatedServiceListRelatedServiceList;
       'sub-links.sub-links': SubLinksSubLinks;
       'sub-lists.sub-lists': SubListsSubLists;
