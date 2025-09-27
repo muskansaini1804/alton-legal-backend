@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_news_letter_news_letters",
+  "info": {
+    "displayName": "newsLetter"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "mainTitle": {
+      "type": "string"
+    },
+    "btnText": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

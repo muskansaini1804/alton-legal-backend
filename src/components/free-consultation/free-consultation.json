@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_hero_sections_hero_sections",
+  "collectionName": "components_free_consultation_free_consultations",
   "info": {
-    "displayName": "heroSections"
+    "displayName": "FreeConsultation"
   },
   "options": {},
   "attributes": {
@@ -9,16 +9,23 @@
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "text",
+    "mainTitle": {
+      "type": "string",
       "required": true
     },
-    "image": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "thumbnailImage": {
       "type": "media",
       "multiple": false,
       "required": true,
       "allowedTypes": [
-        "images"
+        "images",
+        "files",
+        "videos",
+        "audios"
       ]
     },
     "btnText": {

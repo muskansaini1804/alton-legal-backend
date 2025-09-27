@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_btn_text_btn_texts",
+  "info": {
+    "displayName": "btnText"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

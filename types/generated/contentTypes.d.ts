@@ -524,10 +524,14 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     footer: Schema.Attribute.Component<'footer.footer', false>;
+    freeConsultation: Schema.Attribute.Component<
+      'free-consultation.free-consultation',
+      false
+    >;
     header: Schema.Attribute.Component<'header.header', false>;
     heroSections: Schema.Attribute.Component<
       'hero-sections.hero-sections',
-      true
+      false
     >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -535,6 +539,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
       'api::global.global'
     > &
       Schema.Attribute.Private;
+    newsLetter: Schema.Attribute.Component<'news-letter.news-letter', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -624,6 +629,42 @@ export interface ApiLawyersTeamLawyersTeam extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiNewNew extends Struct.CollectionTypeSchema {
+  collectionName: 'news';
+  info: {
+    displayName: 'News';
+    pluralName: 'news';
+    singularName: 'new';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blogNews: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::practice-area.practice-area'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    details: Schema.Attribute.Component<'details.details', true>;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::new.new'> &
+      Schema.Attribute.Private;
+    mainTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    thumbnailImage: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPracticeAreaPracticeArea
   extends Struct.CollectionTypeSchema {
   collectionName: 'practice_areas';
@@ -648,6 +689,7 @@ export interface ApiPracticeAreaPracticeArea
       'api::practice-area.practice-area'
     > &
       Schema.Attribute.Private;
+    news: Schema.Attribute.Relation<'manyToMany', 'api::new.new'>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     thumbnailImage: Schema.Attribute.Media<'images'> &
@@ -1212,6 +1254,7 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::lawyer.lawyer': ApiLawyerLawyer;
       'api::lawyers-team.lawyers-team': ApiLawyersTeamLawyersTeam;
+      'api::new.new': ApiNewNew;
       'api::practice-area.practice-area': ApiPracticeAreaPracticeArea;
       'api::practice-areas-detail.practice-areas-detail': ApiPracticeAreasDetailPracticeAreasDetail;
       'plugin::content-releases.release': PluginContentReleasesRelease;

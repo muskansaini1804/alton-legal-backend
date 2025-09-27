@@ -24,7 +24,17 @@
     "heroSections": {
       "type": "component",
       "component": "hero-sections.hero-sections",
-      "repeatable": true
+      "repeatable": false
+    },
+    "freeConsultation": {
+      "type": "component",
+      "component": "free-consultation.free-consultation",
+      "repeatable": false
+    },
+    "newsLetter": {
+      "type": "component",
+      "component": "news-letter.news-letter",
+      "repeatable": false
     }
   }
 }

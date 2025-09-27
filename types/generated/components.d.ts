@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BtnTextBtnText extends Struct.ComponentSchema {
+  collectionName: 'components_btn_text_btn_texts';
+  info: {
+    displayName: 'btnText';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface CommonCaseCommonCase extends Struct.ComponentSchema {
   collectionName: 'components_common_case_common_cases';
   info: {
@@ -11,6 +22,17 @@ export interface CommonCaseCommonCase extends Struct.ComponentSchema {
       'related-service-list.related-service-list',
       true
     >;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface DetailsDetails extends Struct.ComponentSchema {
+  collectionName: 'components_details_details';
+  info: {
+    displayName: 'details';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -34,6 +56,24 @@ export interface FooterFooter extends Struct.ComponentSchema {
   };
 }
 
+export interface FreeConsultationFreeConsultation
+  extends Struct.ComponentSchema {
+  collectionName: 'components_free_consultation_free_consultations';
+  info: {
+    displayName: 'FreeConsultation';
+  };
+  attributes: {
+    btnText: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.String & Schema.Attribute.Required;
+    mainTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    thumbnailImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface HeaderHeader extends Struct.ComponentSchema {
   collectionName: 'components_header_headers';
   info: {
@@ -51,6 +91,7 @@ export interface HeroSectionsHeroSections extends Struct.ComponentSchema {
     displayName: 'heroSections';
   };
   attributes: {
+    btnText: Schema.Attribute.String & Schema.Attribute.Required;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -85,6 +126,18 @@ export interface NavBarNavBar extends Struct.ComponentSchema {
     searchText: Schema.Attribute.String & Schema.Attribute.Required;
     subLinks: Schema.Attribute.Component<'sub-links.sub-links', true>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface NewsLetterNewsLetter extends Struct.ComponentSchema {
+  collectionName: 'components_news_letter_news_letters';
+  info: {
+    displayName: 'newsLetter';
+  };
+  attributes: {
+    btnText: Schema.Attribute.String;
+    mainTitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -171,12 +224,16 @@ export interface SubListsSubLists extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'btn-text.btn-text': BtnTextBtnText;
       'common-case.common-case': CommonCaseCommonCase;
+      'details.details': DetailsDetails;
       'footer.footer': FooterFooter;
+      'free-consultation.free-consultation': FreeConsultationFreeConsultation;
       'header.header': HeaderHeader;
       'hero-sections.hero-sections': HeroSectionsHeroSections;
       'lists.lists': ListsLists;
       'nav-bar.nav-bar': NavBarNavBar;
+      'news-letter.news-letter': NewsLetterNewsLetter;
       'our-core-values.our-core-value': OurCoreValuesOurCoreValue;
       'our-core-values.why-choose-us': OurCoreValuesWhyChooseUs;
       'our-mission.our-mission': OurMissionOurMission;
