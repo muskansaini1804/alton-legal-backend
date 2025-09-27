@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sub_links_sub_links",
+  "info": {
+    "displayName": "subLinks"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "links": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

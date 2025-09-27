@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "thumbnailImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "ourCoreValue": {
+      "type": "component",
+      "component": "our-core-values.our-core-value",
+      "repeatable": true
+    },
+    "whyChooseUs": {
+      "type": "component",
+      "component": "our-core-values.why-choose-us",
+      "repeatable": true
+    },
+    "ourMission": {
+      "type": "component",
+      "component": "our-mission.our-mission",
+      "repeatable": false
+    },
+    "ourVision": {
+      "type": "component",
+      "component": "our-mission.our-mission",
+      "repeatable": false
+    },
+    "ourCoreValueTitle": {
+      "type": "string",
+      "required": true
+    },
+    "whyChooseUsTitle": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

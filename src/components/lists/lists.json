@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_lists_lists",
+  "info": {
+    "displayName": "lists"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "practiceAreasDetails": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::practice-areas-detail.practice-areas-detail"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_common_case_common_cases",
+  "info": {
+    "displayName": "commonCase"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "relatedServiceList": {
+      "type": "component",
+      "component": "related-service-list.related-service-list",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sub_lists_sub_lists",
+  "info": {
+    "displayName": "subLists"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "links": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

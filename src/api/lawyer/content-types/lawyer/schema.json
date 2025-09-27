@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lawyers",
+  "info": {
+    "singularName": "lawyer",
+    "pluralName": "lawyers",
+    "displayName": "Lawyers"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "adminTeams": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lawyers-team.lawyers-team",
+      "mappedBy": "adminTeams"
+    },
+    "associateTeams": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lawyers-team.lawyers-team",
+      "inversedBy": "associateTeam"
+    },
+    "partnersTeam": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lawyers-team.lawyers-team",
+      "mappedBy": "partnersTeams"
+    },
+    "lawyer": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::practice-area.practice-area",
+      "inversedBy": "lawyers"
+    }
+  }
+}

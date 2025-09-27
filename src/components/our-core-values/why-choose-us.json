@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_our_core_values_why_chooseuses",
+  "info": {
+    "displayName": "whyChooseUs"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

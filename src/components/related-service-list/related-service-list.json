@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_related_service_list_related_service_lists",
+  "info": {
+    "displayName": "relatedServiceList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

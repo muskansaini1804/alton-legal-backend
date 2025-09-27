@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_nav_bar_nav_bars",
+  "info": {
+    "displayName": "navBar"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "links": {
+      "type": "text",
+      "required": true
+    },
+    "subLinks": {
+      "type": "component",
+      "component": "sub-links.sub-links",
+      "repeatable": true
+    },
+    "phone": {
+      "type": "biginteger",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "searchText": {
+      "type": "string",
+      "required": true
+    },
+    "loginText": {
+      "type": "string",
+      "required": true
+    },
+    "languageText": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

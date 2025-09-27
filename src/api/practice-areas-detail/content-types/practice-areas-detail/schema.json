@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "practice_areas_details",
+  "info": {
+    "singularName": "practice-areas-detail",
+    "pluralName": "practice-areas-details",
+    "displayName": "PracticeAreasDetails"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "mainDescription": {
+      "type": "text",
+      "required": true
+    },
+    "thumbnailImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "commonCasetext": {
+      "type": "text",
+      "required": true
+    },
+    "commonCase": {
+      "type": "component",
+      "component": "common-case.common-case",
+      "repeatable": true
+    },
+    "relatedServiceText": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_footer_footers",
+  "info": {
+    "displayName": "footer"
+  },
+  "options": {},
+  "attributes": {
+    "practiceAreaLinks": {
+      "type": "component",
+      "component": "sub-links.sub-links",
+      "repeatable": true
+    },
+    "aboutUsLinks": {
+      "type": "component",
+      "component": "sub-links.sub-links",
+      "repeatable": true
+    },
+    "legalLinks": {
+      "type": "component",
+      "component": "sub-links.sub-links",
+      "repeatable": true
+    },
+    "resourcesLinks": {
+      "type": "component",
+      "component": "sub-links.sub-links",
+      "repeatable": true
+    },
+    "practiceAreaTitle": {
+      "type": "string",
+      "required": true
+    },
+    "aboutUsTitle": {
+      "type": "string",
+      "required": true
+    },
+    "contactUsTitle": {
+      "type": "string",
+      "required": true
+    },
+    "resourcesTitle": {
+      "type": "string",
+      "required": true
+    },
+    "copyRightText": {
+      "type": "string",
+      "required": true
+    },
+    "poweredByText": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

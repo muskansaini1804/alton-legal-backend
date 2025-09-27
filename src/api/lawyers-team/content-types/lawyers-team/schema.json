@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lawyers_teams",
+  "info": {
+    "singularName": "lawyers-team",
+    "pluralName": "lawyers-teams",
+    "displayName": "LawyersTeam"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "jobTitle": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "adminTeams": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lawyer.lawyer",
+      "inversedBy": "adminTeams"
+    },
+    "associateTeam": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lawyer.lawyer",
+      "mappedBy": "associateTeams"
+    },
+    "partnersTeams": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lawyer.lawyer",
+      "inversedBy": "partnersTeam"
+    }
+  }
+}
