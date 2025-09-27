@@ -17,6 +17,21 @@
       "type": "component",
       "component": "nav-bar.nav-bar",
       "repeatable": true
+    },
+    "phoneNumber": {
+      "type": "biginteger",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "loginText": {
+      "type": "string",
+      "required": true
+    },
+    "searchText": {
+      "type": "string"
     }
   },
   "config": {}

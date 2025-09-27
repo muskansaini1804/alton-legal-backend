@@ -1,5 +1,13 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BannerBanner extends Struct.ComponentSchema {
+  collectionName: 'components_banner_banners';
+  info: {
+    displayName: 'banner';
+  };
+  attributes: {};
+}
+
 export interface BtnTextBtnText extends Struct.ComponentSchema {
   collectionName: 'components_btn_text_btn_texts';
   info: {
@@ -80,8 +88,12 @@ export interface HeaderHeader extends Struct.ComponentSchema {
     displayName: 'header';
   };
   attributes: {
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    loginText: Schema.Attribute.String & Schema.Attribute.Required;
     logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     navBar: Schema.Attribute.Component<'nav-bar.nav-bar', true>;
+    phoneNumber: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+    searchText: Schema.Attribute.String;
   };
 }
 
@@ -118,12 +130,7 @@ export interface NavBarNavBar extends Struct.ComponentSchema {
     displayName: 'navBar';
   };
   attributes: {
-    email: Schema.Attribute.Email & Schema.Attribute.Required;
-    languageText: Schema.Attribute.String & Schema.Attribute.Required;
     links: Schema.Attribute.Text & Schema.Attribute.Required;
-    loginText: Schema.Attribute.String & Schema.Attribute.Required;
-    phone: Schema.Attribute.BigInteger & Schema.Attribute.Required;
-    searchText: Schema.Attribute.String & Schema.Attribute.Required;
     subLinks: Schema.Attribute.Component<'sub-links.sub-links', true>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -224,6 +231,7 @@ export interface SubListsSubLists extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'banner.banner': BannerBanner;
       'btn-text.btn-text': BtnTextBtnText;
       'common-case.common-case': CommonCaseCommonCase;
       'details.details': DetailsDetails;
