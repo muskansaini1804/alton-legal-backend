@@ -29,7 +29,7 @@
     "contactUs": {
       "type": "component",
       "component": "btn-text.button-cta",
-      "repeatable": true
+      "repeatable": false
     }
   },
   "config": {}

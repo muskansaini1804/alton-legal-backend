@@ -96,7 +96,7 @@ export interface FreeConsultationFreeConsultation
     displayName: 'FreeConsultation';
   };
   attributes: {
-    ctaConsultation: Schema.Attribute.Component<'btn-text.button-cta', true>;
+    ctaConsultation: Schema.Attribute.Component<'btn-text.button-cta', false>;
     description: Schema.Attribute.String & Schema.Attribute.Required;
     label: Schema.Attribute.String & Schema.Attribute.Required;
     thumbnailImage: Schema.Attribute.Media<
@@ -128,7 +128,7 @@ export interface HeroSectionsHeroSections extends Struct.ComponentSchema {
     displayName: 'heroSections';
   };
   attributes: {
-    contactUs: Schema.Attribute.Component<'btn-text.button-cta', true>;
+    contactUs: Schema.Attribute.Component<'btn-text.button-cta', false>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     practiceArea: Schema.Attribute.Component<'btn-text.button-cta', false>;
