@@ -134,6 +134,16 @@
       },
       "component": "social.social-media",
       "repeatable": true
+    },
+    "learnMore": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "btn-text.button-cta",
+      "repeatable": false
     }
   }
 }

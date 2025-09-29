@@ -65,7 +65,7 @@
       "component": "news-letter.news-letter",
       "repeatable": false
     },
-    "readMore": {
+    "viewAll": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -98,6 +98,14 @@
       }
     },
     "ourTeamTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "meetOurLawyers": {
       "type": "string",
       "pluginOptions": {
         "i18n": {

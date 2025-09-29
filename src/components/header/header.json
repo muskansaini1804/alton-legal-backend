@@ -30,6 +30,9 @@
       "type": "component",
       "component": "btn-text.button-cta",
       "repeatable": false
+    },
+    "languageText": {
+      "type": "string"
     }
   },
   "config": {}
