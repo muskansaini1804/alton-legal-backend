@@ -49,10 +49,7 @@ export interface ContactLinksContactLinks extends Struct.ComponentSchema {
   attributes: {
     email: Schema.Attribute.Email;
     phoneNumber: Schema.Attribute.BigInteger;
-    socialImages: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    socialLinks: Schema.Attribute.Component<'social.social-media', true>;
   };
 }
 
@@ -75,6 +72,7 @@ export interface FooterFooter extends Struct.ComponentSchema {
   attributes: {
     aboutUsLinks: Schema.Attribute.Component<'sub-links.sub-links', true>;
     aboutUsTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    bookCall: Schema.Attribute.Component<'btn-text.button-cta', false>;
     contactLinks: Schema.Attribute.Component<
       'contact-links.contact-links',
       false
@@ -87,7 +85,7 @@ export interface FooterFooter extends Struct.ComponentSchema {
     practiceAreaTitle: Schema.Attribute.String & Schema.Attribute.Required;
     resourcesLinks: Schema.Attribute.Component<'sub-links.sub-links', true>;
     resourcesTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    sociaUrls: Schema.Attribute.Component<'social-media.social-links', false>;
+    signUp: Schema.Attribute.Component<'btn-text.button-cta', false>;
   };
 }
 
@@ -116,11 +114,11 @@ export interface HeaderHeader extends Struct.ComponentSchema {
   };
   attributes: {
     email: Schema.Attribute.Email & Schema.Attribute.Required;
+    login: Schema.Attribute.Component<'btn-text.button-cta', false>;
     loginText: Schema.Attribute.String & Schema.Attribute.Required;
     logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     navBar: Schema.Attribute.Component<'nav-bar.nav-bar', true>;
     phoneNumber: Schema.Attribute.BigInteger & Schema.Attribute.Required;
-    searchText: Schema.Attribute.String;
   };
 }
 
@@ -252,7 +250,17 @@ export interface SocialMediaSocialLinks extends Struct.ComponentSchema {
   };
   attributes: {
     facebook: Schema.Attribute.String;
-    instagram: Schema.Attribute.String;
+  };
+}
+
+export interface SocialSocialMedia extends Struct.ComponentSchema {
+  collectionName: 'components_social_social_medias';
+  info: {
+    displayName: 'socialMedia';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+    url: Schema.Attribute.String;
   };
 }
 
@@ -301,6 +309,7 @@ declare module '@strapi/strapi' {
       'related-service-list.related-service': RelatedServiceListRelatedService;
       'related-service-list.related-service-list': RelatedServiceListRelatedServiceList;
       'social-media.social-links': SocialMediaSocialLinks;
+      'social.social-media': SocialSocialMedia;
       'sub-links.sub-links': SubLinksSubLinks;
       'sub-lists.sub-lists': SubListsSubLists;
     }

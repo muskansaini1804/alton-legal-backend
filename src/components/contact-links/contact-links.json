@@ -11,15 +11,10 @@
     "phoneNumber": {
       "type": "biginteger"
     },
-    "socialImages": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "socialLinks": {
+      "type": "component",
+      "component": "social.social-media",
+      "repeatable": true
     }
   },
   "config": {}
