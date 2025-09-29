@@ -259,7 +259,7 @@ export interface SocialSocialMedia extends Struct.ComponentSchema {
     displayName: 'socialMedia';
   };
   attributes: {
-    text: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     url: Schema.Attribute.String;
   };
 }

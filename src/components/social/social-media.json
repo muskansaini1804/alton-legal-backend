@@ -8,8 +8,15 @@
     "url": {
       "type": "string"
     },
-    "text": {
-      "type": "string"
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   },
   "config": {}
