@@ -115,7 +115,6 @@ export interface HeaderHeader extends Struct.ComponentSchema {
   attributes: {
     email: Schema.Attribute.Email & Schema.Attribute.Required;
     login: Schema.Attribute.Component<'btn-text.button-cta', false>;
-    loginText: Schema.Attribute.String & Schema.Attribute.Required;
     logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     navBar: Schema.Attribute.Component<'nav-bar.nav-bar', true>;
     phoneNumber: Schema.Attribute.BigInteger & Schema.Attribute.Required;
