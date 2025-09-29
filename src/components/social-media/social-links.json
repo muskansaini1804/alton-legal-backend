@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_social_media_social_links",
+  "info": {
+    "displayName": "socialLinks"
+  },
+  "options": {},
+  "attributes": {
+    "instagram": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

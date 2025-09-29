@@ -21,9 +21,15 @@
         "images"
       ]
     },
-    "ctaText": {
-      "type": "string",
-      "required": true
+    "practiceArea": {
+      "type": "component",
+      "component": "btn-text.button-cta",
+      "repeatable": false
+    },
+    "contactUs": {
+      "type": "component",
+      "component": "btn-text.button-cta",
+      "repeatable": true
     }
   },
   "config": {}

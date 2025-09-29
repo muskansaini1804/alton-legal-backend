@@ -53,6 +53,11 @@
       "type": "component",
       "component": "contact-links.contact-links",
       "repeatable": false
+    },
+    "sociaUrls": {
+      "type": "component",
+      "component": "social-media.social-links",
+      "repeatable": false
     }
   },
   "config": {}

@@ -5,11 +5,11 @@
   },
   "options": {},
   "attributes": {
-    "title": {
+    "label": {
       "type": "string",
       "required": true
     },
-    "mainTitle": {
+    "title": {
       "type": "string",
       "required": true
     },
@@ -28,9 +28,10 @@
         "audios"
       ]
     },
-    "ctaText": {
-      "type": "string",
-      "required": true
+    "ctaConsultation": {
+      "type": "component",
+      "component": "btn-text.button-cta",
+      "repeatable": true
     }
   },
   "config": {}
