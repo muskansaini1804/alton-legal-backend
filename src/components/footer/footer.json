@@ -54,9 +54,14 @@
       "component": "contact-links.contact-links",
       "repeatable": false
     },
-    "sociaUrls": {
+    "bookCall": {
       "type": "component",
-      "component": "social-media.social-links",
+      "component": "btn-text.button-cta",
+      "repeatable": false
+    },
+    "signUp": {
+      "type": "component",
+      "component": "btn-text.button-cta",
       "repeatable": false
     }
   },

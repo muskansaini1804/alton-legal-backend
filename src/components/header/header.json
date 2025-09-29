@@ -30,8 +30,10 @@
       "type": "string",
       "required": true
     },
-    "searchText": {
-      "type": "string"
+    "login": {
+      "type": "component",
+      "component": "btn-text.button-cta",
+      "repeatable": false
     }
   },
   "config": {}
