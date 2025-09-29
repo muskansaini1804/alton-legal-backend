@@ -26,10 +26,6 @@
       "type": "email",
       "required": true
     },
-    "loginText": {
-      "type": "string",
-      "required": true
-    },
     "login": {
       "type": "component",
       "component": "btn-text.button-cta",
