@@ -4,7 +4,7 @@
   "info": {
     "singularName": "lawyer",
     "pluralName": "lawyers",
-    "displayName": "Lawyers"
+    "displayName": "LawyerTeams"
   },
   "options": {
     "draftAndPublish": true

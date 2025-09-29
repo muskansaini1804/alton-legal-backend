@@ -615,7 +615,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
 export interface ApiLawyerLawyer extends Struct.CollectionTypeSchema {
   collectionName: 'lawyers';
   info: {
-    displayName: 'Lawyers';
+    displayName: 'LawyerTeams';
     pluralName: 'lawyers';
     singularName: 'lawyer';
   };
@@ -658,7 +658,7 @@ export interface ApiLawyerLawyer extends Struct.CollectionTypeSchema {
 export interface ApiLawyersTeamLawyersTeam extends Struct.CollectionTypeSchema {
   collectionName: 'lawyers_teams';
   info: {
-    displayName: 'LawyersTeam';
+    displayName: 'Lawyers';
     pluralName: 'lawyers-teams';
     singularName: 'lawyers-team';
   };

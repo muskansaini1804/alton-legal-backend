@@ -11,7 +11,7 @@
     "mainTitle": {
       "type": "string"
     },
-    "btnText": {
+    "ctaText": {
       "type": "string"
     }
   },

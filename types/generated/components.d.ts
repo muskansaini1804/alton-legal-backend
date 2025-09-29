@@ -90,7 +90,7 @@ export interface FreeConsultationFreeConsultation
     displayName: 'FreeConsultation';
   };
   attributes: {
-    btnText: Schema.Attribute.String & Schema.Attribute.Required;
+    ctaText: Schema.Attribute.String & Schema.Attribute.Required;
     description: Schema.Attribute.String & Schema.Attribute.Required;
     mainTitle: Schema.Attribute.String & Schema.Attribute.Required;
     thumbnailImage: Schema.Attribute.Media<
@@ -122,7 +122,7 @@ export interface HeroSectionsHeroSections extends Struct.ComponentSchema {
     displayName: 'heroSections';
   };
   attributes: {
-    btnText: Schema.Attribute.String & Schema.Attribute.Required;
+    ctaText: Schema.Attribute.String & Schema.Attribute.Required;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -161,7 +161,7 @@ export interface NewsLetterNewsLetter extends Struct.ComponentSchema {
     displayName: 'newsLetter';
   };
   attributes: {
-    btnText: Schema.Attribute.String;
+    ctaText: Schema.Attribute.String;
     mainTitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };

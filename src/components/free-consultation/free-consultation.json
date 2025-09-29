@@ -28,7 +28,7 @@
         "audios"
       ]
     },
-    "btnText": {
+    "ctaText": {
       "type": "string",
       "required": true
     }

@@ -21,7 +21,7 @@
         "images"
       ]
     },
-    "btnText": {
+    "ctaText": {
       "type": "string",
       "required": true
     }
