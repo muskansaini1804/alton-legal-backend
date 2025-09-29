@@ -26,10 +26,6 @@ export interface CommonCaseCommonCase extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
-    relatedServiceList: Schema.Attribute.Component<
-      'related-service-list.related-service-list',
-      true
-    >;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -214,6 +210,17 @@ export interface PracticeAreasPracticeAreas extends Struct.ComponentSchema {
   };
 }
 
+export interface RelatedServiceListRelatedService
+  extends Struct.ComponentSchema {
+  collectionName: 'components_related_service_list_related_services';
+  info: {
+    displayName: 'relatedService';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface RelatedServiceListRelatedServiceList
   extends Struct.ComponentSchema {
   collectionName: 'components_related_service_list_related_service_lists';
@@ -266,6 +273,7 @@ declare module '@strapi/strapi' {
       'our-core-values.why-choose-us': OurCoreValuesWhyChooseUs;
       'our-mission.our-mission': OurMissionOurMission;
       'practice-areas.practice-areas': PracticeAreasPracticeAreas;
+      'related-service-list.related-service': RelatedServiceListRelatedService;
       'related-service-list.related-service-list': RelatedServiceListRelatedServiceList;
       'sub-links.sub-links': SubLinksSubLinks;
       'sub-lists.sub-lists': SubListsSubLists;

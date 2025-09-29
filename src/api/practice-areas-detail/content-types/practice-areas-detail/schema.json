@@ -56,6 +56,11 @@
       "type": "uid",
       "targetField": "title",
       "required": true
+    },
+    "relatedServiceList": {
+      "type": "component",
+      "component": "related-service-list.related-service",
+      "repeatable": true
     }
   }
 }
