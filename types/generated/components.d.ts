@@ -218,6 +218,7 @@ export interface PracticeAreaPracticeArea extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.String & Schema.Attribute.Required;
+    thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
