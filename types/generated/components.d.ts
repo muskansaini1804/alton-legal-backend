@@ -118,7 +118,7 @@ export interface HeaderHeader extends Struct.ComponentSchema {
     logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     navBar: Schema.Attribute.Component<'nav-bar.nav-bar', true>;
     phoneNumber: Schema.Attribute.BigInteger & Schema.Attribute.Required;
-    searchText: Schema.Attribute.String;
+    searchText: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -207,6 +207,17 @@ export interface OurMissionOurMission extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface PracticeAreaPracticeArea extends Struct.ComponentSchema {
+  collectionName: 'components_practice_area_practice_areas';
+  info: {
+    displayName: 'practiceArea';
+  };
+  attributes: {
+    description: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -306,6 +317,7 @@ declare module '@strapi/strapi' {
       'our-core-values.our-core-value': OurCoreValuesOurCoreValue;
       'our-core-values.why-choose-us': OurCoreValuesWhyChooseUs;
       'our-mission.our-mission': OurMissionOurMission;
+      'practice-area.practice-area': PracticeAreaPracticeArea;
       'practice-areas.practice-areas': PracticeAreasPracticeAreas;
       'related-service-list.related-service': RelatedServiceListRelatedService;
       'related-service-list.related-service-list': RelatedServiceListRelatedServiceList;
