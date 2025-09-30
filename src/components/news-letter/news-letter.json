@@ -13,6 +13,9 @@
     },
     "ctaText": {
       "type": "string"
+    },
+    "emailText": {
+      "type": "string"
     }
   },
   "config": {}

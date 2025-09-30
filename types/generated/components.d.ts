@@ -114,11 +114,11 @@ export interface HeaderHeader extends Struct.ComponentSchema {
   };
   attributes: {
     email: Schema.Attribute.Email & Schema.Attribute.Required;
-    languageText: Schema.Attribute.String;
     login: Schema.Attribute.Component<'btn-text.button-cta', false>;
     logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     navBar: Schema.Attribute.Component<'nav-bar.nav-bar', true>;
     phoneNumber: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+    searchText: Schema.Attribute.String;
   };
 }
 
@@ -169,6 +169,7 @@ export interface NewsLetterNewsLetter extends Struct.ComponentSchema {
   };
   attributes: {
     ctaText: Schema.Attribute.String;
+    emailText: Schema.Attribute.String;
     mainTitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
