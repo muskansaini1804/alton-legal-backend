@@ -32,7 +32,8 @@
       "repeatable": false
     },
     "searchText": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   },
   "config": {}

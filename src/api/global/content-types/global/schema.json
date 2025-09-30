@@ -71,7 +71,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "clientSaysTitle": {
       "type": "string",
@@ -79,15 +80,8 @@
         "i18n": {
           "localized": true
         }
-      }
-    },
-    "practiceAreaTitle": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      },
+      "required": true
     },
     "newsTitle": {
       "type": "string",
@@ -95,7 +89,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "ourTeamTitle": {
       "type": "string",
@@ -103,7 +98,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "meetOurLawyers": {
       "type": "string",
@@ -111,7 +107,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "readMore": {
       "type": "string",
@@ -119,7 +116,19 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
+    },
+    "practiceArea": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "practice-area.practice-area",
+      "repeatable": false,
+      "required": true
     }
   }
 }

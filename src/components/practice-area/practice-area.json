@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_practice_area_practice_areas",
+  "info": {
+    "displayName": "practiceArea"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
