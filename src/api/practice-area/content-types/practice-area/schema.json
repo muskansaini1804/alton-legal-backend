@@ -72,6 +72,12 @@
       "relation": "manyToMany",
       "target": "api::new.new",
       "mappedBy": "blogNews"
+    },
+    "case_studies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::case-study.case-study",
+      "mappedBy": "caseStudyAbouts"
     }
   }
 }
