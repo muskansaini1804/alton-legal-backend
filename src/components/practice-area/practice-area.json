@@ -23,6 +23,10 @@
         "videos",
         "audios"
       ]
+    },
+    "relatedCaseStudyText": {
+      "type": "string",
+      "required": true
     }
   },
   "config": {}
