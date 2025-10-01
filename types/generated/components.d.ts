@@ -240,6 +240,7 @@ export interface PracticeAreaPracticeArea extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.String & Schema.Attribute.Required;
+    ourExpertText: Schema.Attribute.String;
     relatedCaseStudyText: Schema.Attribute.String & Schema.Attribute.Required;
     relatedNewsText: Schema.Attribute.String & Schema.Attribute.Required;
     thumbnail: Schema.Attribute.Media<

@@ -680,17 +680,17 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    ourExpertText: Schema.Attribute.Component<
-      'practice-area.practice-area',
-      false
-    > &
+    ourTeamTitle: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    ourTeamTitle: Schema.Attribute.String &
+    practiceArea: Schema.Attribute.Component<
+      'practice-area.practice-area',
+      false
+    > &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
