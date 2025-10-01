@@ -31,6 +31,9 @@
     "relatedNewsText": {
       "type": "string",
       "required": true
+    },
+    "ourExpertText": {
+      "type": "string"
     }
   },
   "config": {}

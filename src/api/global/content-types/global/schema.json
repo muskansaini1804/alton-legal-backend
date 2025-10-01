@@ -124,7 +124,7 @@
       },
       "required": true
     },
-    "ourExpertText": {
+    "practiceArea": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
