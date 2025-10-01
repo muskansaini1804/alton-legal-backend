@@ -31,7 +31,8 @@
     "ctaConsultation": {
       "type": "component",
       "component": "btn-text.button-cta",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     }
   },
   "config": {}

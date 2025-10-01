@@ -23,7 +23,8 @@
         }
       },
       "component": "header.header",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     },
     "footer": {
       "type": "component",
@@ -33,7 +34,8 @@
         }
       },
       "component": "footer.footer",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     },
     "heroSections": {
       "type": "component",
@@ -43,7 +45,8 @@
         }
       },
       "component": "hero-sections.hero-sections",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     },
     "freeConsultation": {
       "type": "component",
@@ -53,7 +56,8 @@
         }
       },
       "component": "free-consultation.free-consultation",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     },
     "newsLetter": {
       "type": "component",
@@ -63,7 +67,8 @@
         }
       },
       "component": "news-letter.news-letter",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     },
     "viewAll": {
       "type": "string",

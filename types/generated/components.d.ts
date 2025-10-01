@@ -25,8 +25,8 @@ export interface BtnTextButtonCta extends Struct.ComponentSchema {
     displayName: 'buttonCta';
   };
   attributes: {
-    text: Schema.Attribute.String;
-    url: Schema.Attribute.String;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -47,9 +47,10 @@ export interface ContactLinksContactLinks extends Struct.ComponentSchema {
     displayName: 'contactLinks';
   };
   attributes: {
-    email: Schema.Attribute.Email;
-    phoneNumber: Schema.Attribute.BigInteger;
-    socialLinks: Schema.Attribute.Component<'social.social-media', true>;
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    phoneNumber: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+    socialLinks: Schema.Attribute.Component<'social.social-media', true> &
+      Schema.Attribute.Required;
   };
 }
 
@@ -64,28 +65,43 @@ export interface DetailsDetails extends Struct.ComponentSchema {
   };
 }
 
+export interface FeaturesFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_features_features';
+  info: {
+    displayName: 'features';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface FooterFooter extends Struct.ComponentSchema {
   collectionName: 'components_footer_footers';
   info: {
     displayName: 'footer';
   };
   attributes: {
-    aboutUsLinks: Schema.Attribute.Component<'sub-links.sub-links', true>;
+    aboutUsLinks: Schema.Attribute.Component<'sub-links.sub-links', true> &
+      Schema.Attribute.Required;
     aboutUsTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    bookCall: Schema.Attribute.Component<'btn-text.button-cta', false>;
+    bookCall: Schema.Attribute.Component<'btn-text.button-cta', false> &
+      Schema.Attribute.Required;
     contactLinks: Schema.Attribute.Component<
       'contact-links.contact-links',
       false
-    >;
+    > &
+      Schema.Attribute.Required;
     contactUsTitle: Schema.Attribute.String & Schema.Attribute.Required;
     copyRightText: Schema.Attribute.String & Schema.Attribute.Required;
-    legalLinks: Schema.Attribute.Component<'sub-links.sub-links', true>;
+    legalLinks: Schema.Attribute.Component<'sub-links.sub-links', true> &
+      Schema.Attribute.Required;
     poweredByText: Schema.Attribute.String & Schema.Attribute.Required;
-    practiceAreaLinks: Schema.Attribute.Component<'sub-links.sub-links', true>;
+    practiceAreaLinks: Schema.Attribute.Component<'sub-links.sub-links', true> &
+      Schema.Attribute.Required;
     practiceAreaTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    resourcesLinks: Schema.Attribute.Component<'sub-links.sub-links', true>;
     resourcesTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    signUp: Schema.Attribute.Component<'btn-text.button-cta', false>;
+    signUp: Schema.Attribute.Component<'btn-text.button-cta', false> &
+      Schema.Attribute.Required;
   };
 }
 
@@ -96,7 +112,8 @@ export interface FreeConsultationFreeConsultation
     displayName: 'FreeConsultation';
   };
   attributes: {
-    ctaConsultation: Schema.Attribute.Component<'btn-text.button-cta', false>;
+    ctaConsultation: Schema.Attribute.Component<'btn-text.button-cta', false> &
+      Schema.Attribute.Required;
     description: Schema.Attribute.String & Schema.Attribute.Required;
     label: Schema.Attribute.String & Schema.Attribute.Required;
     thumbnailImage: Schema.Attribute.Media<
@@ -114,9 +131,11 @@ export interface HeaderHeader extends Struct.ComponentSchema {
   };
   attributes: {
     email: Schema.Attribute.Email & Schema.Attribute.Required;
-    login: Schema.Attribute.Component<'btn-text.button-cta', false>;
+    login: Schema.Attribute.Component<'btn-text.button-cta', false> &
+      Schema.Attribute.Required;
     logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    navBar: Schema.Attribute.Component<'nav-bar.nav-bar', true>;
+    navBar: Schema.Attribute.Component<'nav-bar.nav-bar', true> &
+      Schema.Attribute.Required;
     phoneNumber: Schema.Attribute.BigInteger & Schema.Attribute.Required;
     searchText: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -128,10 +147,12 @@ export interface HeroSectionsHeroSections extends Struct.ComponentSchema {
     displayName: 'heroSections';
   };
   attributes: {
-    contactUs: Schema.Attribute.Component<'btn-text.button-cta', false>;
+    contactUs: Schema.Attribute.Component<'btn-text.button-cta', false> &
+      Schema.Attribute.Required;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    practiceArea: Schema.Attribute.Component<'btn-text.button-cta', false>;
+    practiceArea: Schema.Attribute.Component<'btn-text.button-cta', false> &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -142,6 +163,7 @@ export interface ListsLists extends Struct.ComponentSchema {
     displayName: 'lists';
   };
   attributes: {
+    keyPoints: Schema.Attribute.Component<'features.features', true>;
     practiceAreasDetails: Schema.Attribute.Relation<
       'oneToMany',
       'api::practice-areas-detail.practice-areas-detail'
@@ -168,10 +190,10 @@ export interface NewsLetterNewsLetter extends Struct.ComponentSchema {
     displayName: 'newsLetter';
   };
   attributes: {
-    ctaText: Schema.Attribute.String;
-    emailText: Schema.Attribute.String;
-    mainTitle: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    ctaText: Schema.Attribute.String & Schema.Attribute.Required;
+    emailText: Schema.Attribute.String & Schema.Attribute.Required;
+    mainTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -218,7 +240,10 @@ export interface PracticeAreaPracticeArea extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.String & Schema.Attribute.Required;
-    thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    thumbnail: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -272,8 +297,9 @@ export interface SocialSocialMedia extends Struct.ComponentSchema {
     displayName: 'socialMedia';
   };
   attributes: {
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    url: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -308,6 +334,7 @@ declare module '@strapi/strapi' {
       'common-case.common-case': CommonCaseCommonCase;
       'contact-links.contact-links': ContactLinksContactLinks;
       'details.details': DetailsDetails;
+      'features.features': FeaturesFeatures;
       'footer.footer': FooterFooter;
       'free-consultation.free-consultation': FreeConsultationFreeConsultation;
       'header.header': HeaderHeader;

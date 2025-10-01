@@ -16,7 +16,8 @@
     "navBar": {
       "type": "component",
       "component": "nav-bar.nav-bar",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     },
     "phoneNumber": {
       "type": "biginteger",
@@ -29,7 +30,8 @@
     "login": {
       "type": "component",
       "component": "btn-text.button-cta",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     },
     "searchText": {
       "type": "string",

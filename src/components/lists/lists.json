@@ -13,6 +13,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::practice-areas-detail.practice-areas-detail"
+    },
+    "keyPoints": {
+      "type": "component",
+      "component": "features.features",
+      "repeatable": true
     }
   },
   "config": {}

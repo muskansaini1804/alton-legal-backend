@@ -6,15 +6,18 @@
   "options": {},
   "attributes": {
     "email": {
-      "type": "email"
+      "type": "email",
+      "required": true
     },
     "phoneNumber": {
-      "type": "biginteger"
+      "type": "biginteger",
+      "required": true
     },
     "socialLinks": {
       "type": "component",
       "component": "social.social-media",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     }
   },
   "config": {}

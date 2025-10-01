@@ -6,16 +6,20 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "mainTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "ctaText": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "emailText": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   },
   "config": {}

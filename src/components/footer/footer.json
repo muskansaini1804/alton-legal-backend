@@ -8,22 +8,20 @@
     "practiceAreaLinks": {
       "type": "component",
       "component": "sub-links.sub-links",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     },
     "aboutUsLinks": {
       "type": "component",
       "component": "sub-links.sub-links",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     },
     "legalLinks": {
       "type": "component",
       "component": "sub-links.sub-links",
-      "repeatable": true
-    },
-    "resourcesLinks": {
-      "type": "component",
-      "component": "sub-links.sub-links",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     },
     "practiceAreaTitle": {
       "type": "string",
@@ -52,17 +50,20 @@
     "contactLinks": {
       "type": "component",
       "component": "contact-links.contact-links",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     },
     "bookCall": {
       "type": "component",
       "component": "btn-text.button-cta",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     },
     "signUp": {
       "type": "component",
       "component": "btn-text.button-cta",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     }
   },
   "config": {}
