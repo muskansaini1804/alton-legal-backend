@@ -35,9 +35,9 @@
     },
     "lawyer": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToOne",
       "target": "api::practice-area.practice-area",
-      "inversedBy": "lawyers"
+      "inversedBy": "lawyerTeam"
     }
   }
 }

@@ -61,9 +61,9 @@
       "component": "lists.lists",
       "repeatable": true
     },
-    "lawyers": {
+    "lawyerTeam": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "oneToOne",
       "target": "api::lawyer.lawyer",
       "mappedBy": "lawyer"
     },
