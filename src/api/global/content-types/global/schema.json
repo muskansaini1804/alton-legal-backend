@@ -134,6 +134,17 @@
       "component": "practice-area.practice-area",
       "repeatable": false,
       "required": true
+    },
+    "ourLawyers": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "practice-areas.practice-areas",
+      "repeatable": true,
+      "required": true
     }
   }
 }

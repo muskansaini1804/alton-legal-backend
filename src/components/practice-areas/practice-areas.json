@@ -12,6 +12,18 @@
     "description": {
       "type": "text",
       "required": true
+    },
+    "partnerText": {
+      "type": "string",
+      "required": true
+    },
+    "associateText": {
+      "type": "string",
+      "required": true
+    },
+    "adminTeamText": {
+      "type": "string",
+      "required": true
     }
   },
   "config": {}

@@ -257,7 +257,10 @@ export interface PracticeAreasPracticeAreas extends Struct.ComponentSchema {
     displayName: 'practiceAreas';
   };
   attributes: {
+    adminTeamText: Schema.Attribute.String & Schema.Attribute.Required;
+    associateText: Schema.Attribute.String & Schema.Attribute.Required;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
+    partnerText: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }
