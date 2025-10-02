@@ -63,7 +63,7 @@
     },
     "lawyers": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::lawyer.lawyer",
       "mappedBy": "lawyer"
     },
