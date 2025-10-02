@@ -783,7 +783,7 @@ export interface ApiLawyerLawyer extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     lawyer: Schema.Attribute.Relation<
-      'manyToMany',
+      'manyToOne',
       'api::practice-area.practice-area'
     >;
     locale: Schema.Attribute.String;
@@ -965,7 +965,7 @@ export interface ApiPracticeAreaPracticeArea
           localized: true;
         };
       }>;
-    lawyers: Schema.Attribute.Relation<'manyToMany', 'api::lawyer.lawyer'>;
+    lawyers: Schema.Attribute.Relation<'oneToMany', 'api::lawyer.lawyer'>;
     lists: Schema.Attribute.Component<'lists.lists', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
