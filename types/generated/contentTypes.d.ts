@@ -756,7 +756,19 @@ export interface ApiLawyerLawyer extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     lawyer: Schema.Attribute.Relation<
+<<<<<<< HEAD
       'oneToOne',
+=======
+<<<<<<< HEAD
+      'manyToOne',
+=======
+<<<<<<< HEAD
+      'oneToOne',
+=======
+      'manyToOne',
+>>>>>>> 7178270867a95f5cd7b88770bdac310aa60f9538
+>>>>>>> 690ca6d2c3c0c05e68a564605c1f06b767792bf6
+>>>>>>> 8f5a311ab0e066deae512332adbebcc25e06be36
       'api::practice-area.practice-area'
     >;
     locale: Schema.Attribute.String;
@@ -938,7 +950,19 @@ export interface ApiPracticeAreaPracticeArea
           localized: true;
         };
       }>;
+<<<<<<< HEAD
     lawyerTeam: Schema.Attribute.Relation<'oneToOne', 'api::lawyer.lawyer'>;
+=======
+<<<<<<< HEAD
+    lawyers: Schema.Attribute.Relation<'oneToMany', 'api::lawyer.lawyer'>;
+=======
+<<<<<<< HEAD
+    lawyerTeam: Schema.Attribute.Relation<'oneToOne', 'api::lawyer.lawyer'>;
+=======
+    lawyers: Schema.Attribute.Relation<'oneToMany', 'api::lawyer.lawyer'>;
+>>>>>>> 7178270867a95f5cd7b88770bdac310aa60f9538
+>>>>>>> 690ca6d2c3c0c05e68a564605c1f06b767792bf6
+>>>>>>> 8f5a311ab0e066deae512332adbebcc25e06be36
     lists: Schema.Attribute.Component<'lists.lists', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
