@@ -107,43 +107,6 @@ export interface AdminApiTokenPermission extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface AdminAuditLog extends Struct.CollectionTypeSchema {
-  collectionName: 'strapi_audit_logs';
-  info: {
-    displayName: 'Audit Log';
-    pluralName: 'audit-logs';
-    singularName: 'audit-log';
-  };
-  options: {
-    draftAndPublish: false;
-    timestamps: false;
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    action: Schema.Attribute.String & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    date: Schema.Attribute.DateTime & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::audit-log'> &
-      Schema.Attribute.Private;
-    payload: Schema.Attribute.JSON;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    user: Schema.Attribute.Relation<'oneToOne', 'admin::user'>;
-  };
-}
-
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -601,8 +564,8 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    caseStudyAbouts: Schema.Attribute.Relation<
-      'manyToMany',
+    case_study_about: Schema.Attribute.Relation<
+      'manyToOne',
       'api::practice-area.practice-area'
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -876,8 +839,8 @@ export interface ApiNewNew extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    blogNews: Schema.Attribute.Relation<
-      'manyToMany',
+    blog_new: Schema.Attribute.Relation<
+      'manyToOne',
       'api::practice-area.practice-area'
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -952,7 +915,7 @@ export interface ApiPracticeAreaPracticeArea
   };
   attributes: {
     case_studies: Schema.Attribute.Relation<
-      'manyToMany',
+      'oneToMany',
       'api::case-study.case-study'
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -977,7 +940,7 @@ export interface ApiPracticeAreaPracticeArea
       'oneToMany',
       'api::practice-area.practice-area'
     >;
-    news: Schema.Attribute.Relation<'manyToMany', 'api::new.new'>;
+    news: Schema.Attribute.Relation<'oneToMany', 'api::new.new'>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     thumbnailImage: Schema.Attribute.Media<'images'> &
@@ -1594,7 +1557,6 @@ declare module '@strapi/strapi' {
     export interface ContentTypeSchemas {
       'admin::api-token': AdminApiToken;
       'admin::api-token-permission': AdminApiTokenPermission;
-      'admin::audit-log': AdminAuditLog;
       'admin::permission': AdminPermission;
       'admin::role': AdminRole;
       'admin::session': AdminSession;

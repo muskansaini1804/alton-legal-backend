@@ -33,9 +33,9 @@
       },
       "required": true
     },
-    "caseStudyAbouts": {
+    "case_study_about": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::practice-area.practice-area",
       "inversedBy": "case_studies"
     }

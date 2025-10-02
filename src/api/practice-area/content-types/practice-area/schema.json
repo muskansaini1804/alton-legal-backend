@@ -69,15 +69,15 @@
     },
     "news": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::new.new",
-      "mappedBy": "blogNews"
+      "mappedBy": "blog_new"
     },
     "case_studies": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::case-study.case-study",
-      "mappedBy": "caseStudyAbouts"
+      "mappedBy": "case_study_about"
     }
   }
 }
